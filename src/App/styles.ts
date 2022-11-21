@@ -14,3 +14,10 @@ export const Timer = styled.div`
   flex-direction: column;
   gap: 2rem;
 `;
+
+export const Buttons = styled.div`
+  display: flex;
+  gap: 2.4rem;
+  cursor: pointer;
+  transition: 0.25s;
+`;

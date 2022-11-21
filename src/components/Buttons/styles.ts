@@ -1,12 +1,5 @@
 import styled from "styled-components";
 
-export const Container = styled.div`
-  display: flex;
-  gap: 2.4rem;
-  cursor: pointer;
-  transition: 0.25s;
-`;
-
 export const Plus = styled.button`
   transition: 0.25s;
   background-color: transparent;
