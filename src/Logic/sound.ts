@@ -1,28 +1,31 @@
 import { cafeteria, chuva, floresta, lareira } from "../assets/sounds";
 
 function sound() {
-  const handleFlorestaSound = () => {
-    pauseAll();
-    floresta.play();
-  };
-  const handleChuvaSound = () => {
-    pauseAll();
-    chuva.play();
-  };
-  const handleCafeteriaPlay = () => {
-    pauseAll();
-    cafeteria.play();
-  };
-  const handleLareiraPlay = () => {
-    pauseAll();
-    lareira.play();
-  };
-
   const pauseAll = () => {
     floresta.pause();
     chuva.pause();
     cafeteria.pause();
     lareira.pause();
+  };
+  const handleFlorestaSound = () => {
+    pauseAll();
+    floresta.play();
+    floresta.loop = true;
+  };
+  const handleChuvaSound = () => {
+    pauseAll();
+    chuva.play();
+    chuva.loop = true;
+  };
+  const handleCafeteriaPlay = () => {
+    pauseAll();
+    cafeteria.play();
+    cafeteria.loop = true;
+  };
+  const handleLareiraPlay = () => {
+    pauseAll();
+    lareira.play();
+    lareira.loop = true;
   };
 
   return {
@@ -30,6 +33,7 @@ function sound() {
     handleChuvaSound,
     handleCafeteriaPlay,
     handleLareiraPlay,
+    pauseAll,
   };
 }
 

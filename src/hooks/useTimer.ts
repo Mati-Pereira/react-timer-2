@@ -1,5 +1,6 @@
 import { useRef, useState } from "react";
-
+import sound from "../Logic/sound";
+const { pauseAll } = sound();
 const useTimer = (initialState = 0) => {
   const [timer, setTimer] = useState(initialState);
   const [isActive, setIsActive] = useState(false);
@@ -32,6 +33,7 @@ const useTimer = (initialState = 0) => {
     setIsActive(false);
     setIsPaused(false);
     setTimer(0);
+    pauseAll();
   };
 
   const handlePlus = () => {
