@@ -17,7 +17,7 @@ export const DivSounds = styled.button`
   border-radius: 16px;
   transition: 0.25s all linear;
   cursor: pointer;
-  gap: 1rem;
+  gap: 3rem;
   &:active {
     svg {
       fill: #fff;
@@ -37,4 +37,6 @@ export const DivSounds = styled.button`
 
 export const InputSound = styled.input`
   width: 80%;
+  height: auto;
+  background: none;
 `;

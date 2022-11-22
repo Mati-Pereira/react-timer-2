@@ -2,14 +2,13 @@ import styled from "styled-components";
 
 export const Container = styled.div`
   display: flex;
-  position: relative;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
-  width: 100%;
+  justify-content: center;
+  gap: 2rem;
+  width: 100vw;
   height: 100vh;
-  gap: 5rem;
   @media screen and (max-width: 480px) {
-    flex-direction: column;
     padding: 0 2rem;
   }
 `;
@@ -32,16 +31,8 @@ export const Buttons = styled.div`
   }
 `;
 
-export const CheckBoxWrapper = styled.div`
-  position: relative;
-`;
-
 export const CheckBoxLabel = styled.label`
-  position: absolute;
-  top: 0;
-  left: 0;
   width: 42px;
-  height: 26px;
   border-radius: 15px;
   background: #bebebe;
   cursor: pointer;
@@ -65,7 +56,7 @@ export const CheckBox = styled.input`
   width: 42px;
   height: 26px;
   &:checked + ${CheckBoxLabel} {
-    background: #4fbe79;
+    background: ${({ theme }) => theme.colors.bgSoundsHover};
     &::after {
       content: "";
       display: block;
@@ -75,5 +66,13 @@ export const CheckBox = styled.input`
       margin-left: 21px;
       transition: 0.2s;
     }
+  }
+`;
+
+export const Div = styled.div`
+  display: flex;
+  gap: 3rem;
+  @media screen and (max-width: 480px) {
+    flex-direction: column;
   }
 `;
