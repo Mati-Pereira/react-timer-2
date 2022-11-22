@@ -43,6 +43,9 @@ const useTimer = (initialState = 0) => {
   const handleMinus = () => {
     if (timer > 0) {
       setTimer((prevState) => prevState - 300);
+      if (timer <= 300) {
+        setTimer(0);
+      }
     }
   };
 
