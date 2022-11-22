@@ -13,9 +13,6 @@ import { Buttons, Container, Div, Timer } from './styles';
 const App = () => {
   const [theme, setTheme] = useState(true);
   console.log("🚀 ~ file: index.tsx ~ line 14 ~ App ~ theme", theme)
-  const themeToggler = () => {
-    setTheme(!theme);
-  }
   const countRef = useRef(0)
   const { timer, isActive, isPaused, handleStart, handlePause, handleResume, handleReset, handlePlus, handleMinus } = useTimer()
   return (
