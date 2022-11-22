@@ -10,11 +10,14 @@ export const DivSounds = styled.button`
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
   background-color: ${({ theme }) => theme.colors.bgSounds};
-  padding: 36px;
+  padding: 1rem;
+  aspect-ratio: 1/1;
   border-radius: 16px;
   transition: 0.25s all linear;
   cursor: pointer;
+  gap: 1rem;
   &:active {
     svg {
       fill: ${({ theme }) => theme.colors.white};
@@ -30,4 +33,8 @@ export const DivSounds = styled.button`
     background-color: ${({ theme }) => theme.colors.bgSoundsHover};
     transition: 0.25s all linear;
   }
+`;
+
+export const InputSound = styled.input`
+  width: 80%;
 `;

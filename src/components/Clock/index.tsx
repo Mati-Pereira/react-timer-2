@@ -6,10 +6,10 @@ export type ClockProps = {
   countRef: any
 }
 
-const Clock = ({ time, countRef, ...rest }: ClockProps) => {
+const Clock = ({ time, countRef }: ClockProps) => {
   return (
     <Container >
-      <span {...rest} ref={countRef}>{time}</span>
+      <span ref={countRef}>{time}</span>
     </Container >
   )
 }

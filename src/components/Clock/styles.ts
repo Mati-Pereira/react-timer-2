@@ -7,4 +7,7 @@ export const Container = styled.div`
   font-weight: 500;
   font-size: 7rem;
   letter-spacing: -5px;
+  @media screen and (max-width: 480px){
+    font-size: 5rem
+  }
 `;
