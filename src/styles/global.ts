@@ -12,6 +12,9 @@ export const GlobalStyles = createGlobalStyle`
   -ms-box-sizing: border-box;
 }
 body{
-  font-family: ${({ theme }) => theme.colors.fontPrimary}
+  font-family: ${({ theme }) => theme.colors.fontPrimary};
+  background-color: ${({ theme }) => theme.colors.white};
+  color: ${({ theme }) => theme.colors.textColor};
+  transition: 0.25s all;
 }
 `;

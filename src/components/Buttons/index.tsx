@@ -1,6 +1,6 @@
 import { BsPauseCircle, BsPlayCircle, BsPlusCircle, BsStopCircle } from 'react-icons/bs'
 import { SlMinus } from 'react-icons/sl'
-import { Minus, Play, Plus, Stop } from "./styles"
+import { Button } from "./styles"
 
 type PlayProps = {
   onClickPlay?: (e: React.MouseEvent<HTMLButtonElement>) => void,
@@ -19,33 +19,33 @@ type MinusProps = {
 
 function PlayButton({ onClickPlay, isActive }: PlayProps) {
   return (
-    <Play onClick={onClickPlay} >
+    <Button onClick={onClickPlay} >
       {isActive ? <BsPauseCircle size={45} /> : <BsPlayCircle size={45} />}
-    </Play>
+    </Button>
   );
 }
 
 function StopButton({ onClickStop }: StopProps) {
   return (
-    <Stop onClick={onClickStop}>
+    <Button onClick={onClickStop}>
       <BsStopCircle size={45} />
-    </Stop>
+    </Button>
   );
 }
 
 function PlusButton({ onClickPlus }: PlusProps) {
   return (
-    <Plus onClick={onClickPlus}>
+    <Button onClick={onClickPlus}>
       <BsPlusCircle size={45} />
-    </Plus>
+    </Button>
   );
 }
 
 function MinusButton({ onClickMinus }: MinusProps) {
   return (
-    <Minus onClick={onClickMinus}>
+    <Button onClick={onClickMinus}>
       <SlMinus size={45} />
-    </Minus>
+    </Button>
   );
 }
 

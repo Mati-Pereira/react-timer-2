@@ -20,7 +20,7 @@ export const DivSounds = styled.button`
   gap: 1rem;
   &:active {
     svg {
-      fill: ${({ theme }) => theme.colors.white};
+      fill: #fff;
     }
     background-color: ${({ theme }) => theme.colors.bgSoundsHover};
     transition: 0.25s;
@@ -28,7 +28,7 @@ export const DivSounds = styled.button`
   }
   &:hover {
     svg {
-      fill: ${({ theme }) => theme.colors.white};
+      fill: #fff;
     }
     background-color: ${({ theme }) => theme.colors.bgSoundsHover};
     transition: 0.25s all linear;

@@ -6,14 +6,7 @@ import Lareira from '../../assets/svg/Lareira'
 import sound from '../../Logic/sound'
 import { Container, DivSounds, InputSound } from './styles'
 
-type Props = {
-  florestaVolume?: number
-  chuvaVolume?: number
-  cafeteriaVolume?: number
-  lareiraVolume?: number
-}
-
-const Sounds = ({ florestaVolume, chuvaVolume, cafeteriaVolume, lareiraVolume }: Props) => {
+const Sounds = () => {
   const { handleFlorestaSound, handleChuvaSound, handleCafeteriaPlay, handleLareiraPlay } = sound()
   return (
     <Container>
